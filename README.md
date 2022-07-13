@@ -25,6 +25,11 @@ Run script:
   
   `bash install_deps_skimmingLoci.sh`
   
+Download the pipeline script:
+
+- [skimmingLoci.sh](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh)
+
+  
 
 **********
 #### skimmingLoci
@@ -40,7 +45,7 @@ This step uses the reference (*.fasta) and
 fastq.gz files, paired (*.R1.fastq.gz, *.R2.fastq.gz) or single 
 (*.R1.fastq.gz):	
 
-`skimmingLoci -m`
+`skimmingLoci.sh -m`
 	
 
 * **Step 2. Call snps**
@@ -49,7 +54,7 @@ fastq.gz files, paired (*.R1.fastq.gz, *.R2.fastq.gz) or single
 This step uses the reference (*.fasta) and the *.bam files generated 
 in step 1:		
 			
-`skimmingLoci -s`
+`skimmingLoci.sh -s`
 	
 
 * **Step 3. Generate consensus sequences**
@@ -58,7 +63,7 @@ in step 1:
 This step uses the reference (*.fasta) and the *.vcf files generated 
 in step 2:
 	
-`skimmingLoci -c`
+`skimmingLoci.sh -c`
   
 
 * **Step 4. Generate alignments**
@@ -67,7 +72,7 @@ in step 2:
 This step uses the reference (*.fasta) and the *.fas files generated
 in step 3:
   
-`skimmingLoci -a`
+`skimmingLoci.sh -a`
   
 
 **********
@@ -82,14 +87,13 @@ in step 3:
 *--max-depth*: [numeric] maximum depth to export a base call to consensus
 
 
-
 *Step 2 generates histograms of depth distribution for each and all 
 samples together to help pick those numbers (*.depth.jpg).
 
 In the following example bases with depth greater than 50 and smaller
 than 4 would be excluded from the alignment (i.e., exported as "N"):
 
-`skimmingLoci -c --min-depth 4 --max-depth 50`
+`skimmingLoci.sh -c --min-depth 4 --max-depth 50`
 
 
 * **Step 4. Generate alignments**
