@@ -50,7 +50,7 @@ Download the pipeline script:
  
  `bash skimmingLoci.sh`
  
- * you can place the skimmingLoci.sh file in your path to make things easier.
+ * You can place the skimmingLoci.sh file in your path to make things easier.
 
 Deactivate skimmingLoci
 
