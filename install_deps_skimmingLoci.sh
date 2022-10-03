@@ -8,7 +8,8 @@
 
 ## install dependencies
 
-
+# wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/install_deps_skimmingLoci.sh
+# bash install_deps_skimmingLoci.sh
 
 # deactivate
 # conda deactivate 
@@ -30,5 +31,3 @@ conda install -y -c r r-base
 echo "install.packages('Rcpp', repos = 'https://cloud.r-project.org', dependencies=T); install.packages('ape', repos = 'https://cloud.r-project.org', dependencies=T); install.packages('https://github.com/mreginato/skimmingLoci/raw/main/skimmingLociR_1.0.tar.gz', repos = NULL, type='source')" > install_r_packs.R
 R CMD BATCH install_r_packs.R
 rm install_r_packs.R
-
-
