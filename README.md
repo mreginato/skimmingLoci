@@ -13,7 +13,7 @@
 
 
 **********
-####  Install dependencies
+####  Installation
 **********
 
 
@@ -21,13 +21,25 @@ Download and install miniconda2 (python 2.7):
 
 - https://conda.io/miniconda.html
 
-Run script:
+Create a conda environment:
+
+`conda create --name skimmingLoci`
+
+Activate the environment:
+
+`conda activate skimmingLoci`
+
+Install dependencies:
+
+Download the script [install_deps_skimmingLoci.sh](https://github.com/mreginato/skimmingLoci/blob/main/install_deps_skimmingLoci.sh) (here) or:
   
-  `bash install_deps_skimmingLoci.sh`
+  `wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/install_deps_skimmingLoci.sh
+  bash install_deps_skimmingLoci.sh`
   
 Download the pipeline script:
 
-- [skimmingLoci.sh](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh)
+- [skimmingLoci.sh](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh) (here) or:
+`wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh`
 
   
 
