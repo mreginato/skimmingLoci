@@ -195,7 +195,7 @@ cd $WD
 # ------------------------------------------------------------------ #
 
 
-DEPS=(bwa samtools bcftools vcftools muscle seqtk R)
+DEPS=(bwa samtools bcftools vcftools mafft seqtk R)
 NUMDEP=0
 for i in "${DEPS[@]}"
 do
@@ -347,9 +347,9 @@ if [ "$MAPPING" = 1 ]; then
 	for i in ${LABS}
 		do
 		if [ "$READS" = 1 ]; then
-		bwa mem $REFERENCE $WD_IN/$i.R1.fastq.gz $WD_IN/$i.R2.fastq.gz "-t$CORES" -A 1 -B 3 -O 5 -a -T 10 -M 2> $BAM_DIR/$i.bwa.log | samtools view -@$CORES -q 1 -b -F 4 -S -T $REFERENCE 2>/dev/null | samtools sort -@$CORES -o $BAM_DIR/$i.bam 2>/dev/null
+		bwa mem $REFERENCE $WD_IN/$i.R1.fastq.gz $WD_IN/$i.R2.fastq.gz "-t$CORES" -A $BWA_A -B $BWA_B -O $BWA_O -a -T 10 -M 2> $BAM_DIR/$i.bwa.log | samtools view -@$CORES -q 1 -b -F 4 -S -T $REFERENCE 2>/dev/null | samtools sort -@$CORES -o $BAM_DIR/$i.bam 2>/dev/null
 		else
-		bwa mem $REFERENCE $WD_IN/$i.R1.fastq.gz "-t$CORES" -A 1 -B 3 -O 5 -a -T 10 -M 2> $BAM_DIR/$i.bwa.log | samtools view -@$CORES -q 1 -b -F 4 -S -T $REFERENCE 2>/dev/null | samtools sort -@$CORES -o $BAM_DIR/$i.bam 2>/dev/null
+		bwa mem $REFERENCE $WD_IN/$i.R1.fastq.gz "-t$CORES" -A $BWA_A -B $BWA_B -O $BWA_O -a -T 10 -M 2> $BAM_DIR/$i.bwa.log | samtools view -@$CORES -q 1 -b -F 4 -S -T $REFERENCE 2>/dev/null | samtools sort -@$CORES -o $BAM_DIR/$i.bam 2>/dev/null
 		fi 
 		(( PP = 100* $COUNTER/$TOTAL_PP ))
 		(( COUNTER = $COUNTER+1 ))
