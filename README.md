@@ -23,6 +23,8 @@ Download and install miniconda3:
 
 Create a conda environment:
 
+It is a good idea to create a conda enviroment for skimmingLoci (to install the dependencies and run the pipeline). To create the environment:
+
 `conda create --name skimmingLoci`
 
 Activate the environment:
@@ -49,6 +51,14 @@ Download the pipeline script:
  `bash skimmingLoci.sh`
  
  * you can place the skimmingLoci.sh file in your path to make things easier.
+
+Deactivate skimmingLoci
+
+To deactivate the skimmingLoci environment just type:
+
+`conda deactivate`
+
+* Remember to activate the environment prior running the pipeline (otherwise you'll likely get an error).
 
 **********
 #### skimmingLoci
