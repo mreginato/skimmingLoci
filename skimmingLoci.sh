@@ -390,7 +390,8 @@ if [ "$CALLING" = 1 ]; then
 	for i in ${LABS}
 		do
 		### bcftools call 
-		samtools mpileup -A -O -s -aa -E -t DP -aa -q30 -Q30 -uf $REFERENCE $BAM_DIR/$i.bam 2>/dev/null > $VCF_DIR/$i.temp.vcf
+		#samtools mpileup -A -O -s -aa -E -t DP -aa -q30 -Q30 -uf $REFERENCE $BAM_DIR/$i.bam 2>/dev/null > $VCF_DIR/$i.temp.vcf
+		bcftools mpileup -A -a DP -Ov -f $REFERENCE $BAM_DIR/$i.bam 2>/dev/null > $VCF_DIR/$i.temp.vcf
 		bcftools call -c -M -Ov -o $VCF_DIR/$i.vcf $VCF_DIR/$i.temp.vcf 2>/dev/null
 		rm $VCF_DIR/$i.temp.vcf
 		vcftools --geno-depth --vcf $VCF_DIR/$i.vcf --out $VCF_DIR/$i 2>/dev/null
