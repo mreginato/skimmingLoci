@@ -31,7 +31,7 @@ Activate the environment:
 
 Install dependencies:
 
-Download the script [install_deps_skimmingLoci.sh](https://github.com/mreginato/skimmingLoci/blob/main/install_deps_skimmingLoci.sh) (here) or:
+Download the script install_deps_skimmingLoci.sh [(here)](https://github.com/mreginato/skimmingLoci/blob/main/install_deps_skimmingLoci.sh) or:
   
   `wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/install_deps_skimmingLoci.sh`
  
@@ -41,7 +41,7 @@ Run the install script
   
 Download the pipeline script:
 
-- [skimmingLoci.sh](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh) (here) or:  
+- skimmingLoci.sh [(here)](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh) or:  
 `wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh`
 
  Test if the pipeline is ok (the help should be printed if it is all good):
