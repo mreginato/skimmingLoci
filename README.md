@@ -33,15 +33,22 @@ Install dependencies:
 
 Download the script [install_deps_skimmingLoci.sh](https://github.com/mreginato/skimmingLoci/blob/main/install_deps_skimmingLoci.sh) (here) or:
   
-  `wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/install_deps_skimmingLoci.sh
-  bash install_deps_skimmingLoci.sh`
+  `wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/install_deps_skimmingLoci.sh`
+ 
+Run the install script 
+
+`bash install_deps_skimmingLoci.sh`
   
 Download the pipeline script:
 
 - [skimmingLoci.sh](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh) (here) or:
 `wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh`
 
-  
+ Test if the pipeline is ok (the help should be printed if it is all good):
+ 
+ `bash skimmingLoci.sh`
+ 
+ * you can place the skimmingLoci.sh file in your path to make things easier.
 
 **********
 #### skimmingLoci
