@@ -17,7 +17,7 @@
 **********
 
 
-Download and install miniconda2 (python 2.7):
+Download and install miniconda3:
 
 - https://conda.io/miniconda.html
 
