@@ -44,7 +44,7 @@ Run the install script
 Download the pipeline script:
 
 - skimmingLoci.sh [(here)](https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh) or:  
-`wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh`
+`wget https://raw.githubusercontent.com/mreginato/skimmingLoci/main/skimmingLoci.sh`  
 `chmod +x skimmingLoci.sh`
 
  Test if the pipeline is ok (the help should be printed if it is all good):
