@@ -60,7 +60,7 @@ To deactivate the skimmingLoci environment just type:
 
 `conda deactivate`
 
-* Remember to activate the environment prior running the pipeline (otherwise you'll likely get an error).
+* Remember to activate the environment before running the pipeline (otherwise you'll likely get an error).
 
 **********
 #### skimmingLoci
