@@ -1,6 +1,6 @@
 # skimmingLoci
 
-## A wrapper for mapping, SNP calling and alignment generation   
+## A pipeline for mapping, SNP calling and alignment generation   
    
 #### Dependencies:						     
 
