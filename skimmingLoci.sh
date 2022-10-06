@@ -407,7 +407,7 @@ if [ "$CALLING" = 1 ]; then
 			write.table(s, '$i.idepth', quote=F)" > $WD/$i.R
 			R CMD BATCH --no-save $WD/$i.R
 			rm $WD/$i.R
-			#rm $WD/$i.Rout
+			rm $WD/$i.Rout
 		fi
 		
 		(( PP = 100* $COUNTER/$TOTAL_PP ))
@@ -421,7 +421,11 @@ if [ "$CALLING" = 1 ]; then
 		tail -q -n 1 *.idepth >> $WD/stats.samples.depth.txt
 		cd $WD
 		echo "setwd('$VCF_DIR');
-		list.files(pattern='.gdepth') -> files; unlist(lapply(sapply(files, read.table, header=T, simplify = F), '[', 3)) -> dat; dat[which(dat < $DEPTH_MAX)] -> dat;
+		list.files(pattern='.gdepth') -> files; vector() -> dat; 
+		for (i in 1:length(files)) {
+  			read.table(files[i], header=T) -> d0; d0[,3] -> d0; c(dat,d0) -> dat;
+		}
+		dat[which(dat < $DEPTH_MAX)] -> dat;
 		setwd('$WD');
 		jpeg('stats.samples.depth.jpg'); layout(matrix(c(1,1,1,2))); par(mar=c(3,3,3,1));
 		hist(dat, xlab='Depth', main='All samples'); legend('topright', legend=paste('depth median =', round(median(dat,2)), '\ndepth sd =', round(sd(dat), 2)), box.col = NA);
