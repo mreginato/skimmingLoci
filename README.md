@@ -9,7 +9,13 @@
 * bcftools - https://github.com/samtools/bcftools		     
 * vcftools - https://github.com/vcftools/vcftools		     
 * mafft - https://mafft.cbrc.jp/alignment/software/			     
-* seqtk - https://github.com/lh3/seqtk			  
+* seqtk - https://github.com/lh3/seqtk	
+
+**********
+#### Tutorial
+**********
+
+A detailed tutorial on how to use the pipeline (including an example data set) and how to filter outlier loci is available [here](http://htmlpreview.github.io/?https://github.com/mreginato/skimmingLoci/blob/main/skimmingLoci_Tutorial.html).
 
 
 **********
@@ -152,12 +158,6 @@ In the following example consensus sequences with less than 20% of coverage from
 
 The pipeline generates basic statistics throughout the process. However, for big data sets this might slow the process. Also, if there is any problem with the R packages the pipeline might crash. To avoid this use the flag "--no-stats".
 
-**********
-#### Tutorial
-**********
-
-A detailed tutorial on how to use the pipeline (including an example data set) and how to filter outlier loci is available [here](http://htmlpreview.github.io/?https://github.com/mreginato/skimmingLoci/blob/main/skimmingLoci_Tutorial.html).
-
 
 **********
 #### Citation
@@ -165,5 +165,5 @@ A detailed tutorial on how to use the pipeline (including an example data set) a
 
 If you use this pipeline and or the companion R package please cite:
 
-Reginato, M. (submitted). A pipeline for assembling low copy nuclear markers from plant genome skimming data for phylogenetic use. 
+Reginato M. 2022. A pipeline for assembling low copy nuclear markers from plant genome skimming data for phylogenetic use. PeerJ 10:e14525 https://doi.org/10.7717/peerj.14525 
 
