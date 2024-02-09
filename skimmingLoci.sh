@@ -94,8 +94,8 @@ CORES=2
 
 ### Bwa parameters 
 BWA_A=1
-BWA_B=3
-BWA_O=5
+BWA_B=4
+BWA_O=6
 
 ### vcf2fq parameters
 DEPTH_MIN=3
